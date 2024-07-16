@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Depósito de Fondos</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css" />
+</head>
+<body>
+    <h1>Depósito de Fondos</h1>
+    <form th:action="@{/usuarios/depositar}" method="post">
+        <input type="hidden" name="cuentaId" th:value="${cuentaId}" />
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" step="0.01" required />
+        <button type="submit">Depositar</button>
+    </form>
+    <a href="/usuarios">Volver a la lista</a>
+</body>
+</html>
